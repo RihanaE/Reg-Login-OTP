@@ -71,14 +71,14 @@ router.post("/send-otp", async (req, res) => {
       host: 'smtp.gmail.com',
       port: 465,
       auth: {
-          user: 'providerloginpass@gmail.com',
-          pass: 'rfxkrktuokuysaow'
+          user: 'the email that is going to provide the otp',
+          pass: 'passcode of the email'
       }
   });
 
 
   const mailOptions = {
-      from: '"Verification Provider"<providerloginpass@gmail.com>',
+      from: '"Verification Provider"<the email that is going to provide the otp>',
       to: `${email}`,
       subject: "OTP Verification",
       text: `Your OTP for login verification is: ${otp}`,
